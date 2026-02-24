@@ -23,10 +23,26 @@ const metadata = {
 
   <!-- Pricing Widget ******************* -->
 
- <Prices
+<Prices
     title="Simple, Transparent Pricing"
-    subtitle="The $80 Diagnostic Fee is the base for all repairs and is applied toward your final labor cost."
+    subtitle="All repairs begin with a diagnostic to ensure we fix the right problem the first time."
     prices={[
+      {
+        title: 'Diagnostics',
+        subtitle: 'The Technical Entry Fee',
+        price: 80,
+        period: 'Flat Rate',
+        items: [
+          { description: 'Applied toward your final repair' },
+          { description: 'Full hardware stress testing' },
+          { description: 'Software & Driver analysis' },
+          { description: 'Detailed repair quote provided' },
+        ],
+        callToAction: {
+          text: 'Start Diagnostic',
+          href: '#contact',
+        },
+      },
       {
         title: 'Computer Repair',
         subtitle: 'Hardware & Deep Fixes',
@@ -39,7 +55,6 @@ const metadata = {
           { description: 'Fresh OS Installation' },
         ],
         callToAction: {
-          target: '_blank',
           text: 'Book Repair',
           href: '#contact',
         },
@@ -57,7 +72,6 @@ const metadata = {
         ],
         callToAction: {
           variant: 'primary',
-          target: '_blank',
           text: 'Start Remote Session',
           href: '#contact',
         },
@@ -76,7 +90,6 @@ const metadata = {
           { description: 'Home Wi-Fi & Internet Help' },
         ],
         callToAction: {
-          target: '_blank',
           text: 'Request Visit',
           href: '#contact',
         },
