@@ -23,88 +23,62 @@ const metadata = {
 
   <!-- Pricing Widget ******************* -->
 
-  <Prices
-    title="Our prices"
-    subtitle="Only pay for what you need"
+ <Prices
+    title="Simple, Transparent Pricing"
+    subtitle="The $80 Diagnostic Fee is the base for all repairs and is applied toward your final labor cost."
     prices={[
       {
-        title: 'basic',
-        subtitle: 'Optimal choice for personal use',
-        price: 29,
-        period: 'per month',
+        title: 'Computer Repair',
+        subtitle: 'Hardware & Deep Fixes',
+        price: 100,
+        period: 'Base Rate',
         items: [
-          {
-            description: 'Etiam in libero, et volutpat',
-          },
-          {
-            description: 'Aenean ac nunc dolor tristique',
-          },
-          {
-            description: 'Cras scelerisque accumsan lib',
-          },
-          {
-            description: 'In hac habitasse',
-          },
+          { description: 'Includes $80 Diagnostic Fee' },
+          { description: 'Laptop Screen Labor ($120)' },
+          { description: 'Battery Installation ($100)' },
+          { description: 'Fresh OS Installation' },
         ],
         callToAction: {
           target: '_blank',
-          text: 'Get started',
-          href: '#',
+          text: 'Book Repair',
+          href: '#contact',
         },
       },
       {
-        title: 'standard',
-        subtitle: 'Optimal choice for small teams',
-        price: 69,
-        period: 'Per Month',
+        title: 'Remote Support',
+        subtitle: 'Software & Quick Fixes',
+        price: 80,
+        period: 'First Hour',
         items: [
-          {
-            description: 'Proin vel laoreet',
-          },
-          {
-            description: 'Ut efficitur habitasse egestas',
-          },
-          {
-            description: 'Volutpat hac curabitur',
-          },
-          {
-            description: 'Pellentesque blandit ut nibh',
-          },
-          {
-            description: 'Donec fringilla sem',
-          },
+          { description: 'Full System Diagnostics' },
+          { description: '$50/hr after first hour' },
+          { description: 'WFH Technology Setup' },
+          { description: 'Driver & Software Fixes' },
         ],
         callToAction: {
+          variant: 'primary',
           target: '_blank',
-          text: 'Get started',
-          href: '#',
+          text: 'Start Remote Session',
+          href: '#contact',
         },
         hasRibbon: true,
-        ribbonTitle: 'popular',
+        ribbonTitle: 'Most Convenient',
       },
       {
-        title: 'premium',
-        subtitle: 'Optimal choice for companies',
-        price: 199,
-        period: 'Per Month',
+        title: 'In-Home Support',
+        subtitle: 'Printers & Networking',
+        price: 150,
+        period: 'Starting Rate',
         items: [
-          {
-            description: 'Curabitur suscipit risus',
-          },
-          {
-            description: 'Aliquam habitasse malesuada',
-          },
-          {
-            description: 'Suspendisse sit amet blandit',
-          },
-          {
-            description: 'Suspendisse auctor blandit dui',
-          },
+          { description: 'Includes $80 Diagnostic Fee' },
+          { description: 'Includes $50-$70 Travel Fee' },
+          { description: 'Printer & Peripheral Setup' },
+          { description: 'Home Wi-Fi & Internet Help' },
         ],
         callToAction: {
           target: '_blank',
-          text: 'Get started',
-          href: '#',
+          text: 'Request Visit',
+          href: '#contact',
         },
       },
     ]}
