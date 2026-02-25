@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: 'Pro-Xi'
+  site: 'https://pro-xi.com'
   base: '/'
   trailingSlash: false
 
@@ -9,22 +9,22 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Pro-Xi | Fast, Reliable Tech Support in Hutto, TX
+    template: '%s — Pro-Xi'
+  description: "Professional IT support and hardware repair in Hutto, TX. Specializing in MacBooks, PCs, and home networking with a secure 24/7 drop-box."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Pro-Xi Tech Support
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@arthelokyo'
-    site: '@arthelokyo'
+    handle: '@Pro-Xi'
+    site: '@Pro-Xi'
     cardType: summary_large_image
 
 i18n:
