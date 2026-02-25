@@ -27,15 +27,16 @@ export const headerData = {
     { 
       text: '512-766-3825', 
       href: 'tel:5127663825', 
-      variant: 'secondary' // Makes the phone number look like a plain button
+      variant: 'secondary' 
     },
     { 
       text: 'Pay Now', 
-      href: 'https://paypal.me/YOUR_USERNAME', // Or your custom PayPal payment link
-      target: '_blank',
-      variant: 'primary' // Makes the "Pay Now" button stand out in Blue
+      href: 'https://paypal.me/YOUR_USERNAME', 
+      target: '_blank', 
+      variant: 'primary' 
     },
   ],
+};
 
 export const footerData = {
   links: [
@@ -43,9 +44,9 @@ export const footerData = {
       title: 'Our Services',
       links: [
         { text: 'Diagnostics', href: getPermalink('/#pricing') },
-        { text: 'Computer Repair', href: getPermalink('/#pricing') },
-        { text: 'Remote Support', href: getPermalink('/#pricing') },
-        { text: 'In-Home Networking', href: getPermalink('/#pricing') },
+        { text: 'Computer Repair', href: getPermalink('/services') },
+        { text: 'Remote Support', href: getPermalink('/services') },
+        { text: 'In-Home Networking', href: getPermalink('/services') },
       ],
     },
     {
@@ -60,13 +61,13 @@ export const footerData = {
   secondaryLinks: [
     { text: '512-766-3825', href: 'tel:5127663825' },
     { text: 'Make a Payment', href: 'https://paypal.me/YOUR_USERNAME' },
-    { text: '226 Almquist St, Hutto, TX 78634', href: 'https://www.google.com/maps/search/?api=1&query=226+Almquist+St+Hutto+TX+78634' },
+    { text: '226 Almquist St, Hutto, TX 78634', href: 'https://maps.google.com/?q=226+Almquist+St+Hutto+TX+78634' },
   ],
   socialLinks: [
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
   ],
   footNote: `
-    © 2026 Pro-xi Tech Support · 226 Almquist St, Hutto, TX 78634 · All rights reserved.
+    © 2026 Pro-Xi Tech Support · 226 Almquist St, Hutto, TX 78634 · All rights reserved.
   `,
 };
