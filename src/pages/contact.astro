@@ -5,19 +5,17 @@ import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Contact',
+  title: 'Contact Pro-xi Tech Support',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
-
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <HeroText tagline="Contact" title="Let's Get You Back Online" />
 
   <ContactUs
     id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    title="Send a Quick Message"
+    subtitle="Have a general question? Drop it here. For hardware repairs, use our Google Form below for a faster estimate."
     inputs={[
       {
         type: 'text',
@@ -31,48 +29,50 @@ const metadata = {
       },
     ]}
     textarea={{
-      label: 'Message',
+      label: 'How can we help?',
     }}
     disclaimer={{
       label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+        'I understand that all repairs begin with an $80 diagnostic fee which is credited toward final labor.',
     }}
-    description="Our support team typically responds within 24 business hours."
+    description="We typically respond within 2 hours during business hours."
   />
 
-  <!-- Features2 Widget ************** -->
-
   <Features2
-    title="We are here to help!"
+    title="Ways to reach us"
     items={[
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Contact sales',
+        title: 'Phone / Text',
         description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-      },
-      {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
-      {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
+          '<a href="tel:5127663825" class="text-blue-600 font-bold hover:underline">512-766-3825</a> <br /> <span class="text-sm">Call or Text for immediate service in Hutto.</span>',
         icon: 'tabler:headset',
       },
       {
-        title: 'Email',
-        description: 'contact@support.com',
-        icon: 'tabler:mail',
+        title: 'Repair Request (Fastest)',
+        description:
+          'Fill out our <a href="https://forms.gle/YOUR_LINK" class="text-blue-600 font-bold underline hover:text-blue-800">Google Form</a> for a detailed quote.',
+        icon: 'tabler:forms',
+      },
+      {
+        title: '24/7 Secure Drop-Box',
+        description:
+          'Drop off your device at 226 Almquist St at any hour. Contact us first for your unique access code.',
+        icon: 'tabler:lock-access',
       },
       {
         title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
+        description: '226 Almquist St, Hutto, TX 78634 <br /> <span class="text-sm">Located in the heart of Hutto.</span>',
         icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Email',
+        description: 'admin@pro-xi.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Service Hours',
+        description: 'Mon - Fri: 9am - 5pm <br /> Sat: 10am - 4pm',
+        icon: 'tabler:clock',
       },
     ]}
   />
