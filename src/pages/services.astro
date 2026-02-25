@@ -10,8 +10,14 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <HeroText tagline="What we do" title="Expert Repair & Support" />
-
+  <HeroText 
+    tagline="What we do" 
+    title="Expert Repair & Support"
+    actions={[
+      { variant: 'primary', text: 'Pricing', href: '/#pricing' },
+      { text: 'Request Quote', href: 'https://forms.gle/YOUR_LINK' },
+    ]}
+  />
   <Features2
     title="Hardware & Software Solutions"
     subtitle="From broken screens to slow networks, we handle it all with precision."
