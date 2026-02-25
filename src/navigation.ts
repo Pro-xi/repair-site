@@ -23,12 +23,19 @@ export const headerData = {
       href: getPermalink('/contact'),
     },
   ],
-  actions: [{ 
-    text: '512-766-3825', 
-    href: 'tel:5127663825', 
-    variant: 'primary' 
-  }],
-};
+  actions: [
+    { 
+      text: '512-766-3825', 
+      href: 'tel:5127663825', 
+      variant: 'secondary' // Makes the phone number look like a plain button
+    },
+    { 
+      text: 'Pay Now', 
+      href: 'https://paypal.me/YOUR_USERNAME', // Or your custom PayPal payment link
+      target: '_blank',
+      variant: 'primary' // Makes the "Pay Now" button stand out in Blue
+    },
+  ],
 
 export const footerData = {
   links: [
@@ -52,6 +59,7 @@ export const footerData = {
   ],
   secondaryLinks: [
     { text: '512-766-3825', href: 'tel:5127663825' },
+    { text: 'Make a Payment', href: 'https://paypal.me/YOUR_USERNAME' },
     { text: '226 Almquist St, Hutto, TX 78634', href: 'https://www.google.com/maps/search/?api=1&query=226+Almquist+St+Hutto+TX+78634' },
   ],
   socialLinks: [
