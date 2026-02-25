@@ -107,6 +107,11 @@ const metadata = {
         icon: 'tabler:currency-dollar',
       },
       {
+        title: '24/7 Secure Drop-Box',
+        description: 'Work odd hours? Use our code-protected secure locker for 24-hour drop-offs and pick-ups on your schedule.',
+        icon: 'tabler:package-import',
+      },
+      {
         title: 'Direct Tech Support',
         description: 'No call centers. Speak directly with the technician handling your device via text or phone.',
         icon: 'tabler:user-check',
@@ -127,24 +132,20 @@ const metadata = {
   <Steps
     title="Our Simplified Repair Process"
     items={[
-      {
-        title: 'Step 1: <span class="font-medium">Request a Quote</span>',
-        description: "Fill out our form with your laptop's model and year. We'll give you a preliminary estimate immediately.",
-        icon: 'tabler:message-report',
+     {
+        title: 'Step 3: <span class="font-medium">Secure Drop-off or Remote Login</span>',
+        description: "Drop your device anytime in our 24-hour, code-protected drop-box for odd-hour convenience, or schedule a remote session.",
+        icon: 'tabler:lock-access',
       },
       {
-        title: 'Step 2: <span class="font-medium">Professional Diagnostic</span>',
-        description: "Drop off your device or schedule a remote login. We verify the exact issue and provide a firm quote.",
-        icon: 'tabler:search',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">The Repair</span>',
-        description: "Upon your approval, we perform the repair and run a 24-hour hardware stress test to ensure stability.",
-        icon: 'tabler:settings',
+        title: 'Step 4: <span class="font-medium">Repair & Quality Check</span>',
+        description: "Once we have your approval, we perform the repair and run a full diagnostic stress test to ensure your tech is running perfectly.",
+        icon: 'tabler:checkup-list',
       },
       {
         title: 'Ready!',
-        icon: 'tabler:check',
+        icon: 'tabler:truck-delivery',
+        description: "Pick up your device from the secure locker at your convenience or receive a confirmation for your remote fix!",
       },
     ]}
     image={{
