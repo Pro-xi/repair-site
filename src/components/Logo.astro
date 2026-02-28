@@ -1,9 +1,15 @@
 ---
-import { SITE } from 'astrowind:config';
+import { SITE } from '~/utils/config';
+import logoImg from '~/assets/images/Pro-xi Logo.png'; // Make sure the filename matches!
 ---
 
-<span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
->
-  🚀 {SITE?.name}
+<span class="self-center ml-2 flex items-center gap-2">
+  <img 
+    src={logoImg.src} 
+    alt="Pro-Xi Logo" 
+    class="w-10 h-10 md:w-12 md:h-12 object-contain" 
+  />
+  <span class="text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white">
+    Pro-Xi
+  </span>
 </span>
