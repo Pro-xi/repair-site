@@ -2,7 +2,7 @@
 publishDate: 2026-03-05T00:00:00Z
 title: "Why Dell Hinges Fail—And How We Fix Them Fast for Hutto & Taylor Residents"
 excerpt: "Hear a cracking sound when you open your laptop? It might not be the screen. Learn why Dell hinges break and how we save your hardware in Hutto."
-image: ~/assets/images/dell-hinge-repair.jpg
+image: ~/assets/images/Lenovo-Broken-Hinge.jpg
 category: Hardware Tips
 tags:
   - dell repair

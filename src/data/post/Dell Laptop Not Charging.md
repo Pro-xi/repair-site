@@ -2,7 +2,7 @@
 publishDate: 2026-03-02T00:00:00Z
 title: "Dell Laptop Not Charging? How to Troubleshoot Battery Issues in Hutto & Round Rock"
 excerpt: "Is your Dell stuck at 0%? Learn how to diagnose battery failures, AC adapter errors, and swelling issues right here in Central Texas."
-image: ~/assets/images/dell-battery.jpg
+image: ~/assets/images/Broken-Part.jpg
 category: Hardware Tips
 tags:
   - dell repair
