@@ -18,20 +18,21 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <Hero
-    actions={[
-      { variant: 'primary', text: 'Book a Repair', href: '#contact', icon: 'tabler:tools' },
-      { text: 'View Services', href: '#features' },
-    ]}
-    image={{ src: 'https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&w=2000&q=80', alt: 'Computer Hardware Repair' }}
-  >
-    <Fragment slot="title">
-      Your Local <span class="text-accent dark:text-white">Tech Neighbor</span> for Fast, Reliable Repairs
-    </Fragment>
+  tagline="Hutto's Specialized Tech Support"
+  actions={[
+    { variant: 'primary', text: 'Book a Repair', href: 'https://forms.gle/yGBAjNPDYJVJd8acA', icon: 'tabler:tools' },
+    { text: 'View Services', href: '/services' },
+  ]}
+>
+  <Fragment slot="title">
+    Fast, Reliable <span class="text-blue-600 dark:text-blue-400">Hardware Repair</span> for Hutto & Taylor
+  </Fragment>
 
-    <Fragment slot="subtitle">
-      Professional IT support for families and local businesses. From cracked laptop screens to complex home Wi-Fi issues, we get you back online without the corporate headache.
-    </Fragment>
-  </Hero>
+  <Fragment slot="subtitle">
+    Specializing in MacBook hinges, broken charging ports, and custom PC builds. 
+    Visit our secure 24/7 drop-box on Almquist St.
+  </Fragment>
+</Hero>
 
   <Note title="Our Policy:" description="The $80 Flat Rate Diagnostic Fee applies to all services and is fully credited toward your final repair labor." />
 
