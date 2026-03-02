@@ -70,3 +70,7 @@ analytics:
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+# Add this at the bottom of your file
+announcement:
+  isEnabled: false
+  content: "Astro v5.12 is now available! »"
