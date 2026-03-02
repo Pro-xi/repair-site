@@ -1,4 +1,4 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getBlogPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -6,7 +6,8 @@ export const headerData = {
       text: 'Home',
       href: getPermalink('/'),
     },
-    { text: 'Gallery', 
+    { 
+      text: 'Gallery', 
       href: getPermalink('/gallery') 
     },
     {
@@ -30,13 +31,14 @@ export const headerData = {
     { 
       text: '512-766-3825', 
       href: 'tel:5127663825', 
-      variant: 'secondary' 
+      variant: 'secondary',
+      target: '_self', // Added to match the Pay Now object structure
     },
     { 
       text: 'Pay Now', 
       href: 'https://www.paypal.com/ncp/payment/8SPBXD7HR38GG', 
       target: '_blank', 
-      variant: 'primary' 
+      variant: 'primary',
     },
   ],
 };
@@ -48,7 +50,7 @@ export const footerData = {
       links: [
         { text: 'Diagnostics', href: getPermalink('/#pricing') },
         { text: 'Computer Repair', href: getPermalink('/services') },
-        { text: 'Remotes Support', href: getPermalink('/services') },
+        { text: 'Remote Support', href: getPermalink('/services') },
         { text: 'In-Home Networking', href: getPermalink('/services') },
       ],
     },
@@ -64,7 +66,11 @@ export const footerData = {
   secondaryLinks: [
     { text: '512-766-3825', href: 'tel:5127663825' },
     { text: 'Make a Payment', href: 'https://www.paypal.com/ncp/payment/8SPBXD7HR38GG' },
-    { text: '226 Almquist St, Hutto, TX 78634', href: 'https://maps.google.com/?q=226+Almquist+St+Hutto+TX+78634' },
+    { 
+      text: '226 Almquist St, Hutto, TX 78634', 
+      href: 'https://www.google.com/maps/search/?api=1&query=226+Almquist+St+Hutto+TX+78634',
+      target: '_blank',
+    },
   ],
   socialLinks: [
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },

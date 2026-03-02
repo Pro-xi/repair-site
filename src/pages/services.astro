@@ -1,6 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import HeroText from '~/components/widgets/HeroText.astro';
+import Hero from '~/components/widgets/Hero.astro'; // CHANGE: Hero instead of HeroText
 import Features2 from '~/components/widgets/Features2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
@@ -10,7 +10,7 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <HeroText 
+  <Hero  
     tagline="What we do" 
     title="Expert Repair & Support"
     actions={[
