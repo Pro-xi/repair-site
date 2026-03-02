@@ -48,7 +48,7 @@ export const footerData = {
       links: [
         { text: 'Diagnostics', href: getPermalink('/#pricing') },
         { text: 'Computer Repair', href: getPermalink('/services') },
-        { text: 'Remote Support', href: getPermalink('/services') },
+        { text: 'Remotes Support', href: getPermalink('/services') },
         { text: 'In-Home Networking', href: getPermalink('/services') },
       ],
     },
