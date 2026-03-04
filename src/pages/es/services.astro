@@ -1,0 +1,86 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+// Header toggle for language switching
+const headerData = {
+  actions: [
+    { text: 'English', href: '/services', variant: 'tertiary' },
+    { variant: 'primary', text: 'Reservar Reparación', href: 'https://forms.gle/yGBAjNPDYJVJd8acA', icon: 'tabler:tools' },
+  ],
+};
+
+const metadata = {
+  title: 'Nuestros Servicios | Pro-Xi Tech Support',
+};
+---
+
+<Layout metadata={metadata} {...headerData}>
+  <Hero  
+    tagline="Lo que hacemos" 
+    title="Reparación y Soporte de Expertos"
+    actions={[
+      { variant: 'primary', text: 'Ver Precios', href: '/es/#pricing' },
+      { text: 'Solicitar Cotización', href: 'https://forms.gle/yGBAjNPDYJVJd8acA' },
+    ]}
+  />
+  <Features2
+    title="Soluciones de Hardware y Software"
+    subtitle="Desde pantallas rotas hasta redes lentas, lo manejamos todo con precisión."
+    items={[
+      {
+        title: 'Reparación de MacBook y Laptops',
+        description: 'Cambio de pantallas, baterías, teclados y reparación de trackpads para todas las marcas principales.',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'Construcción de PC a Medida',
+        description: 'Equipos de alto rendimiento para gaming o estaciones de trabajo profesionales ajustadas a su presupuesto.',
+        icon: 'tabler:cpu',
+      },
+      {
+        title: 'Recuperación de Datos',
+        description: '¿Archivos borrados? ¿Disco duro fallando? Usamos herramientas especializadas para recuperar su información.',
+        icon: 'tabler:database-export',
+      },
+      {
+        title: 'Optimización de Wi-Fi',
+        description: 'Eliminación de puntos muertos y configuración de redes de malla (mesh) de alta velocidad para su hogar u oficina.',
+        icon: 'tabler:wifi',
+      },
+      {
+        title: 'Eliminación de Virus y Malware',
+        description: 'Limpieza profunda de sistemas infectados e instalación de software de seguridad robusto.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Soporte Técnico Remoto',
+        description: 'Solución de problemas de software y optimización del sistema realizada de forma segura por internet.',
+        icon: 'tabler:browser-check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Ver Tarifas de Servicio',
+        href: '/es/#pricing',
+        icon: 'tabler:tag',
+      },
+      {
+        text: 'Solicitar Cotización',
+        href: 'https://forms.gle/yGBAjNPDYJVJd8acA',
+        icon: 'tabler:forms',
+      },
+    ]}
+  >
+    <Fragment slot="title"> ¿Listo para comenzar? </Fragment>
+    <Fragment slot="subtitle">
+      Consulte nuestros niveles de servicio transparentes o complete nuestro formulario para obtener un presupuesto para su dispositivo específico.
+    </Fragment>
+  </CallToAction>
+</Layout>

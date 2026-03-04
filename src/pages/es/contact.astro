@@ -4,30 +4,38 @@ import HeroText from '~/components/widgets/HeroText.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
+// Add the header toggle to go back to English
+const headerData = {
+  actions: [
+    { text: 'English', href: '/contact', variant: 'tertiary' },
+    { variant: 'primary', text: 'Reservar Reparación', href: 'https://forms.gle/yGBAjNPDYJVJd8acA', icon: 'tabler:tools' },
+  ],
+};
+
 const metadata = {
-  title: 'Contact Pro-xi Tech Support',
+  title: 'Contacto - Pro-xi Tech Support',
 };
 ---
 
-<Layout metadata={metadata}>
-  <HeroText tagline="Contact" title="Let's Get You Back Online" />
+<Layout metadata={metadata} {...headerData}>
+  <HeroText tagline="Contacto" title="Permítanos Ayudarle a Volver a Estar en Línea" />
 
   <ContactUs
     id="form"
-    title="Send a Quick Message"
-    subtitle="Have a general question? Drop it here. For hardware repairs, use our Google Form below for a faster estimate."
+    title="Envíe un Mensaje Rápido"
+    subtitle="¿Tiene una pregunta general? Escríbanos aquí. Para reparaciones de hardware, use el formulario de Google a continuación para obtener un presupuesto más rápido."
     inputs={[
-      { type: 'text', name: 'name', label: 'Name' },
-      { type: 'email', name: 'email', label: 'Email' },
+      { type: 'text', name: 'name', label: 'Nombre' },
+      { type: 'email', name: 'email', label: 'Correo Electrónico' },
     ]}
-    textarea={{ label: 'How can we help?' }}
-    description="We typically respond within 2 hours during business hours."
+    textarea={{ label: '¿En qué podemos ayudarle?' }}
+    description="Normalmente respondemos en menos de 2 horas durante el horario laboral."
   />
 
   <section class="px-4 py-12 bg-blue-50 dark:bg-slate-800/50">
     <div class="max-w-3xl mx-auto text-center mb-8">
-      <h2 class="text-3xl font-bold italic text-blue-600 dark:text-blue-400">Detailed Repair Request</h2>
-      <p class="text-muted mt-2">Provide your device details below for a more accurate quote.</p>
+      <h2 class="text-3xl font-bold italic text-blue-600 dark:text-blue-400">Solicitud de Reparación Detallada</h2>
+      <p class="text-muted mt-2">Proporcione los detalles de su dispositivo a continuación para una cotización más precisa.</p>
     </div>
     <div class="flex justify-center">
       <div class="w-full max-w-[700px] bg-white dark:bg-slate-900 rounded-xl shadow-2xl overflow-hidden border border-gray-200 dark:border-gray-700">
@@ -39,45 +47,45 @@ const metadata = {
           marginheight="0" 
           marginwidth="0"
           class="bg-white"
-        >Loading…</iframe>
+        >Cargando…</iframe>
       </div>
     </div>
   </section>
 
   <Features2
-    title="Ways to reach us"
+    title="Formas de contactarnos"
     items={[
       {
-        title: 'Phone / Text',
+        title: 'Teléfono / Texto',
         description:
-          '<a href="tel:5127663825" class="text-blue-600 font-bold hover:underline">512-766-3825</a> <br /> <span class="text-sm">Call or Text for immediate service in Hutto.</span>',
+          '<a href="tel:5127663825" class="text-blue-600 font-bold hover:underline">512-766-3825</a> <br /> <span class="text-sm">Llámenos o envíe un texto para servicio inmediato en Hutto.</span>',
         icon: 'tabler:headset',
       },
       {
-        title: 'Repair Request (Fastest)',
+        title: 'Solicitud de Reparación (Más rápido)',
         description:
-          'Fill out the form above for a detailed quote.',
+          'Llene el formulario de arriba para obtener una cotización detallada.',
         icon: 'tabler:forms',
       },
       {
-        title: '24/7 Secure Drop-Box',
+        title: 'Buzón Seguro 24/7',
         description:
-          'Drop off your device at 226 Almquist St at any hour. Contact us first for your unique access code.',
+          'Entregue su dispositivo en 226 Almquist St a cualquier hora. Contáctenos primero para su código de acceso único.',
         icon: 'tabler:lock-access',
       },
       {
-        title: 'Location',
-        description: '226 Almquist St, Hutto, TX 78634 <br /> <span class="text-sm">Located in the heart of Hutto.</span>',
+        title: 'Ubicación',
+        description: '226 Almquist St, Hutto, TX 78634 <br /> <span class="text-sm">Ubicados en el corazón de Hutto.</span>',
         icon: 'tabler:map-pin',
       },
       {
-        title: 'Email',
+        title: 'Correo Electrónico',
         description: 'admin@pro-xi.com',
         icon: 'tabler:mail',
       },
       {
-        title: 'Service Hours',
-        description: 'Mon - Fri: 9am - 5pm <br /> Sat: 10am - 4pm',
+        title: 'Horario de Servicio',
+        description: 'Lun - Vie: 9am - 5pm <br /> Sáb: 10am - 4pm',
         icon: 'tabler:clock',
       },
     ]}
