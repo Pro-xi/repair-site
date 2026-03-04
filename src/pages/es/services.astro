@@ -4,19 +4,18 @@ import Hero from '~/components/widgets/Hero.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
-// Header toggle for language switching
 const headerData = {
-  // 1. This translates the actual menu links
   links: [
     { text: 'Inicio', href: '/es' },
+    { text: 'Galería', href: '/gallery' },
     { text: 'Servicios', href: '/es/services' },
+    { text: 'Precios', href: '/es/#pricing' },
+    { text: 'Blog', href: '/blog' },
     { text: 'Contacto', href: '/es/contact' },
-    { text: 'Blog', href: '/blog' }, // Keep blog in English or link to Spanish category
   ],
-  // 2. This translates the button and the language toggle
   actions: [
     { text: 'English', href: '/', variant: 'tertiary' },
-    { variant: 'primary', text: 'Reservar Reparación', href: 'https://forms.gle/yGBAjNPDYJVJd8acA', icon: 'tabler:tools' },
+    { variant: 'primary', text: 'Pagar Ahora', href: '#', icon: 'tabler:credit-card' }, // Matches your "Pay Now" button
   ],
 };
 
