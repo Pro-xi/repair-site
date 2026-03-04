@@ -14,9 +14,16 @@ const metadata = {
   title: 'Pro-xi Tech Support — Professional IT Solutions for Home & Business',
   ignoreTitleTemplate: true,
 };
+
+const headerData = {
+  actions: [
+    { text: 'Español', href: '/es', variant: 'tertiary' },
+    { variant: 'primary', text: 'Book a Repair', href: 'https://forms.gle/yGBAjNPDYJVJd8acA', icon: 'tabler:tools' },
+  ],
+};
 ---
 
-<Layout metadata={metadata}>
+<Layout metadata={metadata} {...headerData}>
   <Hero
   tagline="Hutto's Specialized Tech Support"
   actions={[
@@ -149,10 +156,6 @@ const metadata = {
         description: "Pick up your device from the secure locker at your convenience or receive a confirmation for your remote fix!",
       },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=2000&q=80',
-      alt: 'IT Professional working',
-    }}
   />
 
   <FAQs
@@ -175,7 +178,32 @@ const metadata = {
         title: "Are replacement parts included in the price?",
         description: "The prices listed cover labor and diagnostics. Replacement parts (like screens, batteries, or SSDs) are billed separately based on current market cost. We always provide a firm quote for parts and get your approval before ordering anything.",
       },
-    ]}
+    {
+      title: 'Where are you located?',
+      description:
+        'We are located at **226 Almquist St, Hutto, TX 78634**. We are conveniently situated to serve Hutto, Taylor, and the surrounding Williamson County area.',
+    },
+    {
+      title: 'Do you do house calls or on-site repairs?',
+      description:
+        'Yes! We provide on-site tech support for homes and small businesses in Hutto and Taylor. Whether it’s a networking issue, printer setup, or a desktop that is too heavy to move, we come to you.',
+    },
+    {
+      title: 'How long do repairs typically take?',
+      description:
+        'Most software tune-ups and common hardware fixes are completed within **24 to 48 hours**. If a specialty part (like a specific laptop screen or hinge) needs to be ordered, we will give you an exact timeline upfront.',
+    },
+    {
+      title: 'How does the 24/7 Secure Drop-Box work?',
+      description:
+        'It’s designed for your busy schedule. Once you [request a repair](https://forms.gle/yGBAjNPDYJVJd8acA), you will receive a secure code to access our monitored drop-box on Almquist St at any time—day or night.',
+    },
+    {
+      title: 'Can you fix a broken laptop hinge or cracked casing?',
+      description:
+        'Absolutely. This is one of our core specialties. We reinforce internal mounts and replace damaged hinges to ensure your screen opens and closes smoothly again without further damage.',
+    },
+  ]}
   />
 
   <CallToAction

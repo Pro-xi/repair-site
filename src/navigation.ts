@@ -29,10 +29,9 @@ export const headerData = {
   ],
   actions: [
     { 
-      text: '512-766-3825', 
-      href: 'tel:5127663825', 
-      variant: 'secondary',
-      target: '_self', // Added to match the Pay Now object structure
+      text: 'Español', 
+      href: '/es', 
+      variant: 'tertiary' 
     },
     { 
       text: 'Pay Now', 

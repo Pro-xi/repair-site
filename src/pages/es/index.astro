@@ -1,0 +1,203 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const headerData = {
+  actions: [
+    { text: 'English', href: '/', variant: 'tertiary' },
+    { variant: 'primary', text: 'Reservar Reparación', href: 'https://forms.gle/yGBAjNPDYJVJd8acA', icon: 'tabler:tools' },
+  ],
+};
+
+const metadata = {
+  title: 'Pro-xi Tech Support — Soporte Técnico Profesional en Hutto',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata} {...headerData}>
+  <Hero
+    tagline="Soporte Técnico Especializado en Hutto"
+    actions={[
+      { variant: 'primary', text: 'Reservar Reparación', href: 'https://forms.gle/yGBAjNPDYJVJd8acA', icon: 'tabler:tools' },
+      { text: 'Ver Servicios', href: '/services' },
+    ]}
+  >
+    <Fragment slot="title">
+      Reparación de <span class="text-blue-600 dark:text-blue-400">Hardware</span> Rápida y Confiable en Hutto y Taylor
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Especialistas en bisagras de MacBook, puertos de carga dañados y computadoras personalizadas. 
+      Visite nuestro buzón de entrega seguro 24/7 en Almquist St.
+    </Fragment>
+  </Hero>
+
+  <Note title="Nuestra Política:" description="La tarifa de diagnóstico de $80 se aplica a todos los servicios y se acredita totalmente al costo final de la mano de obra." />
+
+  <Prices
+    id="pricing" 
+    title="Nuestras Tarifas"
+    subtitle="Precios transparentes. Sin términos técnicos confusos."
+    prices={[
+      {
+        title: 'Diagnóstico',
+        subtitle: 'Evaluación Técnica',
+        price: 80,
+        period: 'Tarifa Fija',
+        items: [
+          { description: 'Se aplica como crédito a su reparación' },
+          { description: 'Pruebas de estrés de hardware' },
+          { description: 'Presupuesto detallado incluido' },
+          { description: 'Análisis de la causa raíz' },
+        ],
+        callToAction: { text: 'Iniciar Diagnóstico', href: '#contact' },
+        hasRibbon: true,
+        ribbonTitle: 'Más Popular',
+      },
+      {
+        title: 'Reparación',
+        subtitle: 'Hardware y Arreglos Profundos',
+        price: 100,
+        period: 'Tarifa Base',
+        items: [
+          { description: 'Incluye la tarifa de diagnóstico de $80' },
+          { description: 'Mano de obra para pantallas ($120)' },
+          { description: 'Instalación de baterías ($100)' },
+          { description: 'Instalación de sistema operativo' },
+        ],
+        callToAction: { text: 'Reservar Reparación', href: '#contact' },
+      },
+      {
+        title: 'Soporte Remoto',
+        subtitle: 'Software y Arreglos Rápidos',
+        price: 80,
+        period: 'Primera Hora',
+        items: [
+          { description: 'Diagnóstico completo del sistema' },
+          { description: '$50/hr después de la primera hora' },
+          { description: 'Configuración para teletrabajo' },
+          { description: 'Arreglo de drivers y programas' },
+        ],
+        callToAction: { variant: 'primary', text: 'Iniciar Sesión Remota', href: '#contact' },
+      },
+      {
+        title: 'Soporte a Domicilio',
+        subtitle: 'Impresoras y Redes',
+        price: 150,
+        period: 'Tarifa Inicial',
+        items: [
+          { description: 'Incluye la tarifa de diagnóstico de $80' },
+          { description: 'Incluye tarifa de viaje ($50-$70)' },
+          { description: 'Configuración de impresoras' },
+          { description: 'Ayuda con Wi-Fi e Internet' },
+        ],
+        callToAction: { text: 'Solicitar Visita', href: '#contact' },
+      },
+    ]}
+  />
+
+  <Features
+    id="features"
+    tagline="Beneficios"
+    title="¿Por qué elegir Pro-xi?"
+    items={[
+      {
+        title: 'Precios Transparentes',
+        description: 'Tarifas claras y honestas con una base de diagnóstico de $80. Sin cargos ocultos.',
+        icon: 'tabler:currency-dollar',
+      },
+      {
+        title: 'Buzón Seguro 24/7',
+        description: '¿Trabaja en horarios difíciles? Use nuestro casillero seguro con código para entregas y recogidas a cualquier hora.',
+        icon: 'tabler:package-import',
+      },
+      {
+        title: 'Soporte Técnico Directo',
+        description: 'Sin centros de llamadas. Hable directamente con el técnico que repara su dispositivo por texto o teléfono.',
+        icon: 'tabler:user-check',
+      },
+      {
+        title: 'Crédito de Diagnóstico',
+        description: 'Su tarifa de diagnóstico se aplica directamente a su factura final, asegurando el valor de su inversión.',
+        icon: 'tabler:receipt-2',
+      },
+      {
+        title: 'Entrega Rápida',
+        description: 'La mayoría de las reparaciones se completan en 48-72 horas tras recibir las piezas.',
+        icon: 'tabler:bolt',
+      },
+    ]}
+  />
+
+  <Steps
+    title="Nuestro Proceso Simplificado"
+    items={[
+      {
+        title: 'Paso 1: <span class="font-medium">Entrega Segura o Acceso Remoto</span>',
+        description: "Deje su dispositivo en nuestro buzón seguro 24/7 o programe una sesión remota desde su casa.",
+        icon: 'tabler:lock-access',
+      },
+      {
+        title: 'Paso 2: <span class="font-medium">Reparación y Control de Calidad</span>',
+        description: "Una vez aprobado, reparamos y realizamos pruebas exhaustivas para asegurar que todo funcione perfectamente.",
+        icon: 'tabler:checkup-list',
+      },
+      {
+        title: '¡Listo!',
+        icon: 'tabler:truck-delivery',
+        description: "Recoja su dispositivo del casillero seguro cuando prefiera o reciba la confirmación de su arreglo remoto.",
+      },
+    ]}
+  />
+
+  <FAQs
+    title="Preguntas Frecuentes"
+    subtitle="Respuestas rápidas sobre nuestros servicios en Hutto."
+    items={[
+      {
+        title: '¿Dónde están ubicados?',
+        description: 'Estamos en **226 Almquist St, Hutto, TX 78634**. Servimos a Hutto, Taylor y áreas cercanas.',
+      },
+      {
+        title: '¿Hacen visitas a domicilio?',
+        description: '¡Sí! Ofrecemos soporte técnico a domicilio para casas y pequeños negocios en Hutto y Taylor.',
+      },
+      {
+        title: '¿Cuánto tiempo toma la reparación?',
+        description: 'La mayoría de las reparaciones se completan en **24 a 48 horas**. Si necesitamos pedir una pieza especial, le daremos un tiempo estimado de inmediato.',
+      },
+      {
+        title: '¿Perderé mis fotos o archivos?',
+        description: 'Priorizamos la seguridad de sus datos. A menos que el disco duro haya fallado físicamente, sus archivos permanecerán intactos.',
+      },
+    ]}
+  />
+
+  <CallToAction
+    id="contact"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Llenar Formulario de Reparación',
+        href: 'https://forms.gle/ENmcpVyRyrcUZceM6',
+        target: '_blank',
+        icon: 'tabler:forms',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      ¿Listo para arreglar su tecnología?
+    </Fragment>
+    <Fragment slot="subtitle">
+      Contáctenos hoy para un presupuesto sin compromiso. Su solución técnica está a un clic de distancia.
+    </Fragment>
+  </CallToAction>
+</Layout>
