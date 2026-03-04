@@ -6,8 +6,16 @@ import Features2 from '~/components/widgets/Features2.astro';
 
 // Add the header toggle to go back to English
 const headerData = {
+  // 1. This translates the actual menu links
+  links: [
+    { text: 'Inicio', href: '/es' },
+    { text: 'Servicios', href: '/es/services' },
+    { text: 'Contacto', href: '/es/contact' },
+    { text: 'Blog', href: '/blog' }, // Keep blog in English or link to Spanish category
+  ],
+  // 2. This translates the button and the language toggle
   actions: [
-    { text: 'English', href: '/contact', variant: 'tertiary' },
+    { text: 'English', href: '/', variant: 'tertiary' },
     { variant: 'primary', text: 'Reservar Reparación', href: 'https://forms.gle/yGBAjNPDYJVJd8acA', icon: 'tabler:tools' },
   ],
 };
