@@ -9,7 +9,8 @@ import Prices from '~/components/widgets/Pricing.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
-cconst headerData = {
+// Header configuration specifically for the Spanish page
+const headerData = {
   links: [
     { text: 'Inicio', href: '/es' },
     { text: 'Galería', href: '/gallery' },
@@ -20,7 +21,12 @@ cconst headerData = {
   ],
   actions: [
     { text: 'English', href: '/', variant: 'tertiary' },
-    { variant: 'primary', text: 'Pagar Ahora', href: '#', icon: 'tabler:credit-card' }, // Matches your "Pay Now" button
+    { 
+      variant: 'primary', 
+      text: 'Pagar Ahora', 
+      href: 'https://www.paypal.com/ncp/payment/8SPBXD7HR38GG', 
+      icon: 'tabler:credit-card' 
+    },
   ],
 };
 
@@ -35,7 +41,7 @@ const metadata = {
     tagline="Soporte Técnico Especializado en Hutto"
     actions={[
       { variant: 'primary', text: 'Reservar Reparación', href: 'https://forms.gle/yGBAjNPDYJVJd8acA', icon: 'tabler:tools' },
-      { text: 'Ver Servicios', href: '/services' },
+      { text: 'Ver Servicios', href: '/es/services' },
     ]}
   >
     <Fragment slot="title">

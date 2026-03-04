@@ -1,53 +1,60 @@
 import { getPermalink, getBlogPermalink } from './utils/permalinks';
 
+/**
+ * ENGLISH NAVIGATION DATA
+ */
 export const headerData = {
   links: [
-    {
-      text: 'Home',
-      href: getPermalink('/'),
-    },
-    { 
-      text: 'Gallery', 
-      href: getPermalink('/gallery') 
-    },
-    {
-      text: 'Services',
-      href: getPermalink('/services'),
-    },
-    {
-      text: 'Pricing',
-      href: getPermalink('/#pricing'),
-    },
-    {
-      text: 'Blog',
-      href: getBlogPermalink(),
-    },
-    {
-      text: 'Contact',
-      href: getPermalink('/contact'),
-    },
+    { text: 'Home', href: getPermalink('/') },
+    { text: 'Gallery', href: getPermalink('/gallery') },
+    { text: 'Services', href: getPermalink('/services') },
+    { text: 'Pricing', href: getPermalink('/#pricing') },
+    { text: 'Blog', href: getBlogPermalink() },
+    { text: 'Contact', href: getPermalink('/contact') },
   ],
   actions: [
-    { 
-      text: 'Español', 
-      href: '/es', 
-      variant: 'tertiary' 
-    },
+    { text: 'Español', href: '/es', variant: 'tertiary' },
     { 
       text: 'Pay Now', 
       href: 'https://www.paypal.com/ncp/payment/8SPBXD7HR38GG', 
       target: '_blank', 
-      variant: 'primary',
+      variant: 'primary' 
     },
   ],
 };
 
+/**
+ * SPANISH NAVIGATION DATA
+ */
+export const headerDataEs = {
+  links: [
+    { text: 'Inicio', href: getPermalink('/es') },
+    { text: 'Galería', href: getPermalink('/gallery') },
+    { text: 'Servicios', href: getPermalink('/es/services') },
+    { text: 'Precios', href: getPermalink('/es/#pricing') },
+    { text: 'Blog', href: getBlogPermalink() },
+    { text: 'Contacto', href: getPermalink('/es/contact') },
+  ],
+  actions: [
+    { text: 'English', href: '/', variant: 'tertiary' },
+    { 
+      text: 'Pagar Ahora', 
+      href: 'https://www.paypal.com/ncp/payment/8SPBXD7HR38GG', 
+      target: '_blank', 
+      variant: 'primary' 
+    },
+  ],
+};
+
+/**
+ * SHARED FOOTER DATA
+ */
 export const footerData = {
   links: [
     {
-      title: 'Our Services',
+      title: 'Our Services / Servicios',
       links: [
-        { text: 'Diagnostics', href: getPermalink('/#pricing') },
+        { text: 'Diagnostics / Diagnóstico', href: getPermalink('/#pricing') },
         { text: 'Computer Repair', href: getPermalink('/services') },
         { text: 'Remote Support', href: getPermalink('/services') },
         { text: 'In-Home Networking', href: getPermalink('/services') },
@@ -67,7 +74,7 @@ export const footerData = {
     { text: 'Make a Payment', href: 'https://www.paypal.com/ncp/payment/8SPBXD7HR38GG' },
     { 
       text: '226 Almquist St, Hutto, TX 78634', 
-      href: 'https://www.google.com/maps/search/?api=1&query=226+Almquist+St+Hutto+TX+78634',
+      href: 'https://maps.google.com/?q=226+Almquist+St+Hutto+TX+78634',
       target: '_blank',
     },
   ],

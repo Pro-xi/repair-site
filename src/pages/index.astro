@@ -5,46 +5,52 @@ import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
 import Prices from '~/components/widgets/Pricing.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+
+// Header configuration to provide the Spanish toggle
+const headerData = {
+  actions: [
+    { text: 'Español', href: '/es', variant: 'tertiary' },
+    { 
+      variant: 'primary', 
+      text: 'Pay Now', 
+      href: 'https://www.paypal.com/ncp/payment/8SPBXD7HR38GG', 
+      icon: 'tabler:credit-card' 
+    },
+  ],
+};
 
 const metadata = {
   title: 'Pro-xi Tech Support — Professional IT Solutions for Home & Business',
   ignoreTitleTemplate: true,
 };
-
-const headerData = {
-  actions: [
-    { text: 'Español', href: '/es', variant: 'tertiary' },
-    { variant: 'primary', text: 'Book a Repair', href: 'https://forms.gle/yGBAjNPDYJVJd8acA', icon: 'tabler:tools' },
-  ],
-};
 ---
 
 <Layout metadata={metadata} {...headerData}>
   <Hero
-  tagline="Hutto's Specialized Tech Support"
-  actions={[
-    { variant: 'primary', text: 'Book a Repair', href: 'https://forms.gle/yGBAjNPDYJVJd8acA', icon: 'tabler:tools' },
-    { text: 'View Services', href: '/services' },
-  ]}
->
-  <Fragment slot="title">
-    Fast, Reliable <span class="text-blue-600 dark:text-blue-400">Hardware Repair</span> for Hutto & Taylor
-  </Fragment>
+    tagline="Hutto's Specialized Tech Support"
+    actions={[
+      { variant: 'primary', text: 'Book a Repair', href: 'https://forms.gle/yGBAjNPDYJVJd8acA', icon: 'tabler:tools' },
+      { text: 'View Services', href: '/services' },
+    ]}
+  >
+    <Fragment slot="title">
+      Fast, Reliable <span class="text-blue-600 dark:text-blue-400">Hardware Repair</span> for Hutto & Taylor
+    </Fragment>
 
-  <Fragment slot="subtitle">
-    Specializing in MacBook hinges, broken charging ports, and custom PC builds. 
-    Visit our secure 24/7 drop-box on Almquist St.
-  </Fragment>
-</Hero>
+    <Fragment slot="subtitle">
+      Specializing in MacBook hinges, broken charging ports, and custom PC builds. 
+      Visit our secure 24/7 drop-box on Almquist St.
+    </Fragment>
+  </Hero>
 
   <Note title="Our Policy:" description="The $80 Flat Rate Diagnostic Fee applies to all services and is fully credited toward your final repair labor." />
 
   <Prices
-    id="pricing"  title="Service Tiers"
+    id="pricing" 
+    title="Service Tiers"
     subtitle="Transparent rates. No hidden tech jargon."
     prices={[
       {
@@ -140,7 +146,7 @@ const headerData = {
   <Steps
     title="Our Simplified Repair Process"
     items={[
-     {
+      {
         title: 'Step 1: <span class="font-medium">Secure Drop-off or Remote Login</span>',
         description: "Drop your device anytime in our 24-hour, code-protected drop-box for odd-hour convenience, or schedule a remote session.",
         icon: 'tabler:lock-access',
@@ -160,50 +166,25 @@ const headerData = {
 
   <FAQs
     title="Frequently Asked Questions"
-    tagline="FAQs"
+    subtitle="Everything you need to know about repairs at Pro-Xi."
     items={[
       {
-        title: 'What does the $80 Diagnostic Fee cover?',
-        description: 'It covers our time to open the device, test components, and research specific part compatibility. This fee is credited toward your repair if you move forward.',
+        title: 'Where are you located?',
+        description: 'We are located at **226 Almquist St, Hutto, TX 78634**. We proudly serve Hutto, Taylor, and the surrounding areas.',
       },
       {
-        title: 'Why do you need my laptop model and year?',
-        description: 'Parts vary wildly between years. Knowing your specific model allows us to give you a 100% accurate quote on screens, batteries, or hinges before you even arrive.',
+        title: 'Do you do house calls?',
+        description: 'Yes! We offer on-site service calls for networking issues, printer setup, or desktop repairs throughout Hutto and Taylor.',
       },
       {
-        title: 'Do you work with local businesses?',
-        description: 'Yes! We help local shops with printer setups, office networking, and device refreshes without requiring a monthly contract.',
+        title: 'How long do repairs typically take?',
+        description: 'Most software tune-ups and common hardware fixes are completed within **24–48 hours**. Specialty parts may require additional time.',
       },
       {
-        title: "Are replacement parts included in the price?",
-        description: "The prices listed cover labor and diagnostics. Replacement parts (like screens, batteries, or SSDs) are billed separately based on current market cost. We always provide a firm quote for parts and get your approval before ordering anything.",
+        title: 'Will I lose my photos and data?',
+        description: 'We prioritize data safety. Unless your hard drive itself has failed, your photos and files will remain exactly where they are.',
       },
-    {
-      title: 'Where are you located?',
-      description:
-        'We are located at **226 Almquist St, Hutto, TX 78634**. We are conveniently situated to serve Hutto, Taylor, and the surrounding Williamson County area.',
-    },
-    {
-      title: 'Do you do house calls or on-site repairs?',
-      description:
-        'Yes! We provide on-site tech support for homes and small businesses in Hutto and Taylor. Whether it’s a networking issue, printer setup, or a desktop that is too heavy to move, we come to you.',
-    },
-    {
-      title: 'How long do repairs typically take?',
-      description:
-        'Most software tune-ups and common hardware fixes are completed within **24 to 48 hours**. If a specialty part (like a specific laptop screen or hinge) needs to be ordered, we will give you an exact timeline upfront.',
-    },
-    {
-      title: 'How does the 24/7 Secure Drop-Box work?',
-      description:
-        'It’s designed for your busy schedule. Once you [request a repair](https://forms.gle/yGBAjNPDYJVJd8acA), you will receive a secure code to access our monitored drop-box on Almquist St at any time—day or night.',
-    },
-    {
-      title: 'Can you fix a broken laptop hinge or cracked casing?',
-      description:
-        'Absolutely. This is one of our core specialties. We reinforce internal mounts and replace damaged hinges to ensure your screen opens and closes smoothly again without further damage.',
-    },
-  ]}
+    ]}
   />
 
   <CallToAction
