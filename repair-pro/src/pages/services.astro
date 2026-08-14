@@ -1,0 +1,78 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro'; // CHANGE: Hero instead of HeroText
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Our Services | Pro-Xi Tech Support',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero  
+    tagline="What we do" 
+    title="Expert Repair & Support"
+    actions={[
+      { variant: 'primary', text: 'Pricing', href: '/#pricing' },
+      { text: 'Request Quote', href: 'https://forms.gle/yGBAjNPDYJVJd8acA' },
+    ]}
+  />
+  <Features2
+    title="Hardware & Software Solutions"
+    subtitle="From broken screens to slow networks, we handle it all with precision."
+    items={[
+      {
+        title: 'MacBook & Laptop Repair',
+        description: 'Screen replacements, battery swaps, keyboard repairs, and trackpad fixes for all major brands.',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'Custom PC Building',
+        description: 'Building high-performance gaming rigs or professional workstations tailored to your budget.',
+        icon: 'tabler:cpu',
+      },
+      {
+        title: 'Data Recovery',
+        description: 'Accidentally deleted files? Failing hard drive? We use specialized tools to get your data back.',
+        icon: 'tabler:database-export',
+      },
+      {
+        title: 'Home Wi-Fi Optimization',
+        description: 'Eliminating dead zones and setting up secure, high-speed mesh networks for your home or office.',
+        icon: 'tabler:wifi',
+      },
+      {
+        title: 'Virus & Malware Removal',
+        description: 'Deep cleaning of infected systems and installation of robust security software.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Remote IT Support',
+        description: 'Software troubleshooting and tune-ups performed securely over the internet.',
+        icon: 'tabler:browser-check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'View Pricing Tiers',
+        href: '/#pricing',
+        icon: 'tabler:tag',
+      },
+      {
+        text: 'Request a Quote',
+        href: 'https://forms.gle/yGBAjNPDYJVJd8acA',
+        icon: 'tabler:forms',
+      },
+    ]}
+  >
+    <Fragment slot="title"> Ready to get started? </Fragment>
+    <Fragment slot="subtitle">
+      Check out our transparent service tiers or fill out our quick request form to get an estimate for your specific device.
+    </Fragment>
+  </CallToAction>
+</Layout>

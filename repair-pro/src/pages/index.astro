@@ -1,0 +1,209 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+// Header configuration to provide the Spanish toggle
+const headerData = {
+  actions: [
+    { text: 'Español', href: '/es', variant: 'tertiary' },
+    { 
+      variant: 'primary', 
+      text: 'Pay Now', 
+      href: 'https://www.paypal.com/ncp/payment/8SPBXD7HR38GG', 
+      icon: 'tabler:credit-card' 
+    },
+  ],
+};
+
+const metadata = {
+  title: 'Hippo Tech Repair — Professional IT Solutions for Home & Business',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata} {...headerData}>
+  <Hero
+    tagline="Hutto's Specialized Tech Support"
+    actions={[
+      { variant: 'primary', text: 'Book a Repair', href: 'https://forms.gle/yGBAjNPDYJVJd8acA', icon: 'tabler:tools' },
+      { text: 'View Services', href: '/services' },
+    ]}
+  >
+    <Fragment slot="title">
+      Fast, Reliable <span class="text-blue-600 dark:text-blue-400">Hardware Repair</span> for Hutto & Taylor
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Specializing in MacBook hinges, broken charging ports, and custom PC builds. 
+      Visit our secure 24/7 drop-box on Almquist St.
+    </Fragment>
+  </Hero>
+
+  <Note title="Our Policy:" description="The $80 Flat Rate Diagnostic Fee applies to all services and is fully credited toward your final repair labor." />
+
+  <Prices
+    id="pricing" 
+    title="Service Tiers"
+    subtitle="Transparent rates. No hidden tech jargon."
+    prices={[
+      {
+        title: 'Diagnostics',
+        subtitle: 'The Technical Entry Fee',
+        price: 80,
+        period: 'Flat Rate',
+        items: [
+          { description: 'Applied toward your final repair' },
+          { description: 'Full hardware stress testing' },
+          { description: 'Detailed repair quote provided' },
+          { description: 'Root-cause analysis' },
+        ],
+        callToAction: { text: 'Start Diagnostic', href: '#contact' },
+        hasRibbon: true,
+        ribbonTitle: 'Most Popular',
+      },
+      {
+        title: 'Computer Repair',
+        subtitle: 'Hardware & Deep Fixes',
+        price: 100,
+        period: 'Base Rate',
+        items: [
+          { description: 'Includes $80 Diagnostic Fee' },
+          { description: 'Laptop Screen Labor ($120)' },
+          { description: 'Battery Installation ($100)' },
+          { description: 'Fresh OS Installation' },
+        ],
+        callToAction: { text: 'Book Repair', href: '#contact' },
+      },
+      {
+        title: 'Remote Support',
+        subtitle: 'Software & Quick Fixes',
+        price: 80,
+        period: 'First Hour',
+        items: [
+          { description: 'Full System Diagnostics' },
+          { description: '$50/hr after first hour' },
+          { description: 'Work-From-Home Tech Setup' },
+          { description: 'Driver & Software Fixes' },
+        ],
+        callToAction: { variant: 'primary', text: 'Start Remote Session', href: '#contact' },
+      },
+      {
+        title: 'In-Home Support',
+        subtitle: 'Printers & Networking',
+        price: 150,
+        period: 'Starting Rate',
+        items: [
+          { description: 'Includes $80 Diagnostic Fee' },
+          { description: 'Includes $50-$70 Travel Fee' },
+          { description: 'Printer & Peripheral Setup' },
+          { description: 'Home Wi-Fi & Internet Help' },
+        ],
+        callToAction: { text: 'Request Visit', href: '#contact' },
+      },
+    ]}
+  />
+
+  <Features
+    id="features"
+    tagline="Features"
+    title="Why Choose Hippo Tech Repair?"
+    items={[
+      {
+        title: 'Transparent Pricing',
+        description: 'Clear, upfront rates with a guaranteed $80 diagnostic base. No mystery fees or hidden charges.',
+        icon: 'tabler:currency-dollar',
+      },
+      {
+        title: '24/7 Secure Drop-Box',
+        description: 'Work odd hours? Use our code-protected secure locker for 24-hour drop-offs and pick-ups on your schedule.',
+        icon: 'tabler:package-import',
+      },
+      {
+        title: 'Direct Tech Support',
+        description: 'No call centers. Speak directly with the technician handling your device via text or phone.',
+        icon: 'tabler:user-check',
+      },
+      {
+        title: 'Diagnostic Credit',
+        description: 'Your diagnostic fee is applied directly to your final bill, ensuring immediate value for your investment.',
+        icon: 'tabler:receipt-2',
+      },
+      {
+        title: 'Fast Turnaround',
+        description: 'Most hardware repairs are completed within 48-72 hours of parts arrival. Remote help is often same-day.',
+        icon: 'tabler:bolt',
+      },
+    ]}
+  />
+
+  <Steps
+    title="Our Simplified Repair Process"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Secure Drop-off or Remote Login</span>',
+        description: "Drop your device anytime in our 24-hour, code-protected drop-box for odd-hour convenience, or schedule a remote session.",
+        icon: 'tabler:lock-access',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Repair & Quality Check</span>',
+        description: "Once approved, we complete the repair and perform a comprehensive quality check to ensure your tech is running smoothly and reliably.",
+        icon: 'tabler:checkup-list',
+      },
+      {
+        title: 'Ready!',
+        icon: 'tabler:truck-delivery',
+        description: "Pick up your device from the secure locker at your convenience or receive a confirmation for your remote fix!",
+      },
+    ]}
+  />
+
+  <FAQs
+    title="Frequently Asked Questions"
+    subtitle="Everything you need to know about repairs at Hippo Tech Repair."
+    items={[
+      {
+        title: 'Where are you located?',
+        description: 'We are located at **226 Almquist St, Hutto, TX 78634**. We proudly serve Hutto, Taylor, and the surrounding areas.',
+      },
+      {
+        title: 'Do you do house calls?',
+        description: 'Yes! We offer on-site service calls for networking issues, printer setup, or desktop repairs throughout Hutto and Taylor.',
+      },
+      {
+        title: 'How long do repairs typically take?',
+        description: 'Most software tune-ups and common hardware fixes are completed within **24–48 hours**. Specialty parts may require additional time.',
+      },
+      {
+        title: 'Will I lose my photos and data?',
+        description: 'We prioritize data safety. Unless your hard drive itself has failed, your photos and files will remain exactly where they are.',
+      },
+    ]}
+  />
+
+  <CallToAction
+    id="contact"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Fill out Repair Form',
+        href: 'https://forms.gle/ENmcpVyRyrcUZceM6',
+        target: '_blank',
+        icon: 'tabler:forms',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Ready to fix your tech?
+    </Fragment>
+    <Fragment slot="subtitle">
+      Contact us today for a free estimate. Your IT solutions are just a click away.
+    </Fragment>
+  </CallToAction>
+</Layout>

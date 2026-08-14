@@ -1,0 +1,27 @@
+name: Weekly AI Article Generator
+on:
+  schedule:
+    - cron: '0 9 * * 1' # Every Monday at 9:00 AM
+  workflow_dispatch: # Allows you to run it manually for testing
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm install
+      - name: Generate Article
+        run: node generate.js
+        env:
+          GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GSHEET_JSON }}
+      - name: Commit and Push
+        run: |
+          git config --global user.name "AI Editor"
+          git config --global user.email "ai@editor.com"
+          git add .
+          git commit -m "New Article: AI Generated"
+          git push
