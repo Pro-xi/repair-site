@@ -1,6 +1,6 @@
 site:
-  name: 'Pro-Xi'
-  site: 'https://pro-xi.com'
+  name: 'Hippo Tech Repair'
+  site: 'https://hippotechrepair.com'
   base: '/'
   trailingSlash: false
 
@@ -24,7 +24,7 @@ metadata:
     type: website
   twitter:
     handle: '@Pro-Xi'
-    site: '@Pro-Xi'
+    site: '@hippotechrepair.com'
     cardType: summary_large_image
 
 i18n:
